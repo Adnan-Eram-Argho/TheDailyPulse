@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import GoogleLogin from "../firebase/GoogleLogin";
 
 
+
 function Registration() {
     const [user] = useAuthState(auth);
     const Navigate = useNavigate();
@@ -29,8 +30,24 @@ function Registration() {
         const form = e.target;
         const email = form.email.value;
         const pass = form.pass.value;
+        const name = form.name.value;
 
-        createUserWithEmailAndPassword(email, pass);
+        createUserWithEmailAndPassword(email, pass).then(data=>{
+            if(data?.user?.email){
+                const userInfo = {
+                  email: data?.user?.email,
+                  name:name
+                }
+                fetch("http://localhost:5000/user", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(userInfo),
+                }).then(res=>res.json()).then(data=>console.log(data))
+        
+              }
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -41,6 +58,12 @@ function Registration() {
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form className="card-body" onSubmit={handleSubmit}>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" placeholder="name" className="input input-bordered" required name="name" />
+                        </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>

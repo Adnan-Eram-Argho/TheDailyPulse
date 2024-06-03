@@ -6,7 +6,7 @@ function Environment() {
   const [news, setNews] = useState();
   useEffect(() => {
     async function load() {
-      const newsData = await axios.get("http://localhost:3000/news_articles");
+      const newsData = await axios.get("http://localhost:5000/news_articles");
       setNews(newsData?.data);
     }
     load();

@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 
 function SingleDashboardNews({news}) {
     async function deleteElement(){
-        const del = await axios.delete(`http://localhost:3000/news_articles/${news.id}`);
+      
+        const del = await axios.delete(`http://localhost:5000/news_articles/${news?._id}`);
+        console.log(del)
         if(del){
          
           window.location.reload();
@@ -25,7 +27,7 @@ function SingleDashboardNews({news}) {
       </h2>
       <p>{news?.description}</p>
       <div className="card-actions justify-end">
-         <Link to={`/dashboard/edit-news/${news?.id}`} className="btn bg-secondary-content">edit</Link>
+         <Link to={`/dashboard/edit-news/${news?._id}`} className="btn bg-secondary-content">edit</Link>
          <button className="btn bg-secondary-content" onClick={deleteElement}>delete</button>
         <div className="badge badge-outline">{news.news_type}</div>
       </div>

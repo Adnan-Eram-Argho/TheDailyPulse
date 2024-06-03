@@ -2,25 +2,43 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import SingleDashboardNews from "./SingleDashboardNews";
 
-
 function AllNews() {
-  const [newses, setNewses] = useState();
+  const [newses, setNewses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     async function load() {
-      const newsData = await axios.get("http://localhost:3000/news_articles");
-      setNewses(newsData?.data);
+      try {
+        const newsData = await axios.get("http://localhost:5000/news_articles");
+        setNewses(newsData?.data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
     }
     load();
   }, []);
-  return ( <>
-  <h1 className="text-3xl my-5 font-bold">All news</h1>
-    <div className="flex flex-wrap mt-5 w-11/12 m-auto">
-      {
-        newses?.map(news=><SingleDashboardNews key={news.id} news={news}/>)
-      }
-    </div>
+
+  if (loading) {
+    return <div className="flex items-center justify-center h-screen"><span className="loading loading-spinner loading-lg text-center"></span></div>
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <>
+      <h1 className="text-3xl my-5 font-bold">All news</h1>
+      <div className="flex flex-wrap mt-5 w-11/12 m-auto">
+        {newses.map((news) => (
+          <SingleDashboardNews key={news.id} news={news} />
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
-export default AllNews
+export default AllNews;

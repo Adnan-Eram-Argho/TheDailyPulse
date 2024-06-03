@@ -17,6 +17,8 @@ import MainDashboard from "../components/dashboard/MainDashboard";
 import AllNews from "../components/dashboard/AllNews";
 import AddNews from "../components/dashboard/AddNews";
 import EditNews from "../components/dashboard/EditNews";
+import Profile from "../components/dashboard/Profile";
+import EditProfile from "../components/dashboard/EditProfile";
 
 
   const router = createBrowserRouter([
@@ -79,6 +81,14 @@ import EditNews from "../components/dashboard/EditNews";
           element:<MainDashboard/>
         },
         {
+          path: "profile/edit/:id",
+          element:
+          <EditProfile />
+        ,
+           loader: ({ params }) =>
+            fetch(`http://localhost:5000/user/get/${params.id}`),
+        },
+        {
           path:'all-news',
           element:<AllNews/>
         },
@@ -89,6 +99,10 @@ import EditNews from "../components/dashboard/EditNews";
         {
           path:'edit-news/:id',
           element:<EditNews/>
+        },
+        {
+          path:'profile',
+          element:<Profile/>
         },
       ]
 

@@ -11,7 +11,7 @@ function Home() {
   const [news, setNews] = useState();
   useEffect(() => {
     async function load() {
-      const newsData = await axios.get("http://localhost:3000/news_articles");
+      const newsData = await axios.get("http://localhost:5000/news_articles");
       setNews(newsData?.data);
     }
     load();
@@ -47,7 +47,7 @@ function Home() {
       }
       <h1 className="text-center mt-5 text-4xl">Tech News</h1>
       <div className="flex flex-wrap mt-5 mb-5 items-center justify-between">
-        {news?.filter(techfilter)?.map((singleNews) => (
+        {news?.filter(techfilter)?.splice(0, 3)?.map((singleNews) => (
           <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
         ))}
       </div>
@@ -65,7 +65,7 @@ function Home() {
       }
       <h1 className="text-center mt-5 text-4xl">Business News</h1>
       <div className="flex flex-wrap mt-5 mb-5 items-center justify-between">
-        {news?.filter(business)?.map((singleNews) => (
+        {news?.filter(business)?.splice(0, 3)?.map((singleNews) => (
           <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
         ))}
       </div>
@@ -84,7 +84,7 @@ function Home() {
 
       <h1 className="text-center mt-5 text-4xl">Environment News</h1>
       <div className="flex flex-wrap mt-5 mb-5 items-center justify-between  ">
-        {news?.filter(Environment)?.map((singleNews) => (
+        {news?.filter(Environment)?.splice(0, 3)?.map((singleNews) => (
           <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
         ))}
       </div>

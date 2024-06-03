@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 
 function AddNews() {
     const [newsType, setNewsType] = useState();
     useEffect(() => {
       async function load() {
-        const data =await axios.get("http://localhost:3000/news_types");
+        const data =await axios.get("http://localhost:5000/news_types");
         
         if (data?.status === 200) {
           setNewsType(data?.data);
@@ -21,36 +22,30 @@ function AddNews() {
     const  handleCreateRecipe=async(e)=>{
       e.preventDefault();
       const form =e.target;
-      const id = form.id.value;
+      
       const title = form.title.value;
       const image = form.img.value;
       const news_type=form.news_type.value;
       const description = form.description.value;
-      const newsData = {id,title,image,news_type,description}
+      const newsData = {title,image,news_type,description}
       console.log(newsData)
   
-       await axios.post("http://localhost:3000/news_articles",newsData) 
+     const result=  await axios.post("http://localhost:5000/news_articles",newsData).then() 
+     console.log(result)
+     toast.success('Successfully added!')
     }
   return (
     <div className="w-full p-16">
-    <h1 className="text-center text-3xl">Add recipe</h1>
+    <h1 className="text-center text-3xl">Add News</h1>
   <form className="w-full" onSubmit={handleCreateRecipe}>
-    <div className="mb-4">
-      <label htmlFor="">id</label>
-      <input
-        type="text"
-        name="id"
-        placeholder="id"
-        className="w-full py-5 px-7 border"
-      />
-    </div>
+    
     <div className="mb-4">
       <label htmlFor="">Title</label>
       <input
         type="text"
         name="title"
         placeholder="Title"
-        className="w-full py-5 px-7 border"
+        className="w-full py-5 px-7 border rounded-xl"
       />
     </div>
     <div className="mb-4">
@@ -59,12 +54,12 @@ function AddNews() {
         type="text"
         name="img"
         placeholder="Image"
-        className="w-full py-5 px-7 border"
+        className="w-full py-5 px-7 border rounded-xl"
       />
     </div>
     <div className="mb-4">
         <label htmlFor="">news_type</label>
-      <select name="news_type" id="" className="w-full py-5 px-7 border">
+      <select name="news_type" id="" className="w-full py-5 px-7 border rounded-xl">
         
         {
             newsType?.map(news=><option key={news.id} value={news.news_type} >{news.news_type}</option>)
@@ -78,7 +73,7 @@ function AddNews() {
         type="text"
         name="description"
         placeholder="description"
-        className="w-full py-5 px-7 border"
+        className="w-full py-5 px-7 border rounded-xl"
       />
     </div>
     <div className="mb-4">
