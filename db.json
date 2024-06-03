@@ -1,0 +1,282 @@
+{
+    "news_articles":[
+    {
+       "id": "1",
+       "title": "Major Breakthrough in AI Technology",
+       "description": "Scientists have developed a new AI system that can perform tasks with unprecedented accuracy and speed.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Technology"
+     },
+     {
+       "id": "2",
+       "title": "Global Markets Rally as Economic Fears Ease",
+       "description": "Stock markets around the world surged today as fears of an economic downturn eased following positive data from several major economies.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Business"
+     },
+     {
+       "id": "3",
+       "title": "New Species of Bird Discovered in Amazon Rainforest",
+       "description": "A team of researchers has discovered a new species of bird in the Amazon rainforest, highlighting the rich biodiversity of the region.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Environment"
+     },
+     {
+       "id": "4",
+       "title": "Local Community Comes Together to Clean Up Beach",
+       "description": "Volunteers from the local community organized a beach clean-up event, collecting over 500 pounds of trash and debris.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Local"
+     },
+     {
+       "id": "5",
+       "title": "Breakthrough in Cancer Research Offers New Hope",
+       "description": "Researchers have made a significant breakthrough in cancer treatment, potentially offering new hope to millions of patients worldwide.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Health"
+     },
+     {
+       "id": "6",
+       "title": "Historic Peace Agreement Signed",
+       "description": "After years of conflict, a historic peace agreement has been signed, bringing hope to the region.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "World"
+     },
+     {
+       "id": "7",
+       "title": "Tech Giants Release New Smartphones",
+       "description": "Several major tech companies have released their latest smartphones, featuring cutting-edge technology and sleek designs.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Technology"
+     },
+     {
+       "id": "8",
+       "title": "Economic Growth Exceeds Expectations",
+       "description": "The latest economic data shows that growth has exceeded expectations, with significant gains in various sectors.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Business"
+     },
+     {
+       "id": "9",
+       "title": "Climate Change Initiatives Gain Momentum",
+       "description": "New initiatives aimed at combating climate change are gaining momentum, with increased support from governments and businesses.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Environment"
+     },
+     {
+       "id": "10",
+       "title": "City Implements New Public Transportation System",
+       "description": "A new public transportation system has been implemented in the city, aiming to reduce traffic congestion and pollution.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Local"
+     },
+     {
+       "id": "11",
+       "title": "New Drug Shows Promise in Treating Alzheimer's",
+       "description": "A new drug has shown promise in treating Alzheimer's disease, potentially offering a breakthrough for patients.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Health"
+     },
+     {
+       "id": "12",
+       "title": "International Summit Addresses Global Challenges",
+       "description": "Leaders from around the world gathered at an international summit to address pressing global challenges and collaborate on solutions.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "World"
+     },
+     {
+       "id": "13",
+       "title": "Innovative Startups Disrupt Traditional Industries",
+       "description": "Innovative startups are disrupting traditional industries with new technologies and business models.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Technology"
+     },
+     {
+       "id": "14",
+       "title": "Stock Prices Soar Amid Positive Earnings Reports",
+       "description": "Stock prices soared today following positive earnings reports from several major companies.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Business"
+     },
+     {
+       "id": "15",
+       "title": "Wildlife Conservation Efforts Yield Positive Results",
+       "description": "Efforts to conserve wildlife are yielding positive results, with several species showing signs of recovery.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Environment"
+     },
+     {
+       "id": "16",
+       "title": "Community Garden Project Brings Neighbors Together",
+       "description": "A community garden project is bringing neighbors together and providing fresh produce for local families.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Local"
+     },
+     {
+       "id": "17",
+       "title": "Advancements in Medical Technology Save Lives",
+       "description": "Recent advancements in medical technology are saving lives and improving patient outcomes.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Health"
+     },
+     {
+       "id": "18",
+       "title": "Global Leaders Commit to Renewable Energy",
+       "description": "Global leaders have committed to increasing the use of renewable energy sources to combat climate change.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "World"
+     },
+     {
+       "id": "19",
+       "title": "Tech Conference Showcases Latest Innovations",
+       "description": "The latest innovations in technology were showcased at a major tech conference, attracting industry leaders and enthusiasts.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Technology"
+     },
+     {
+       "id": "20",
+       "title": "Job Market Shows Signs of Improvement",
+       "description": "The job market is showing signs of improvement, with unemployment rates falling and new job opportunities emerging.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Business"
+     },
+     {
+       "id": "21",
+       "title": "Clean Energy Projects Expand Worldwide",
+       "description": "Clean energy projects are expanding worldwide, with significant investments in solar, wind, and other renewable sources.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Environment"
+     },
+     {
+       "id": "22",
+       "title": "Local Festival Celebrates Cultural Diversity",
+       "description": "A local festival celebrating cultural diversity drew large crowds and featured performances, food, and art from around the world.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Local"
+     },
+     {
+       "id": "23",
+       "title": "Breakthrough in Diabetes Treatment",
+       "description": "A breakthrough in diabetes treatment could improve the quality of life for millions of patients worldwide.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Health"
+     },
+     {
+       "id": "24",
+       "title": "International Cooperation Strengthens Global Security",
+       "description": "Increased international cooperation is strengthening global security and addressing common threats.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "World"
+     },
+     {
+       "id": "25",
+       "title": "New Software Revolutionizes Data Analysis",
+       "description": "A new software application is revolutionizing data analysis, making it faster and more efficient.",
+       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYagQhCAz8MdokglLEmBSofq3IhwU7JZS3tg&s",
+       "news_type": "Technology"
+     }
+   ],
+    "news_types": [
+       {
+         "id": "1",
+         "news_type": "Technology"
+       },
+       {
+         "id": "2",
+         "news_type": "Business"
+       },
+       {
+         "id": "3",
+         "news_type": "Environment"
+       },
+       {
+         "id": "4",
+         "news_type": "Local"
+       },
+       {
+         "id": "5",
+         "news_type": "Health"
+       },
+       {
+         "id": "6",
+         "news_type": "World"
+       },
+       {
+         "id": "7",
+         "news_type": "Technology"
+       },
+       {
+         "id": "8",
+         "news_type": "Business"
+       },
+       {
+         "id": "9",
+         "news_type": "Environment"
+       },
+       {
+         "id": "10",
+         "news_type": "Local"
+       },
+       {
+         "id": "11",
+         "news_type": "Health"
+       },
+       {
+         "id": "12",
+         "news_type": "World"
+       },
+       {
+         "id": "13",
+         "news_type": "Technology"
+       },
+       {
+         "id": "14",
+         "news_type": "Business"
+       },
+       {
+         "id": "15",
+         "news_type": "Environment"
+       },
+       {
+         "id": "16",
+         "news_type": "Local"
+       },
+       {
+         "id": "17",
+         "news_type": "Health"
+       },
+       {
+         "id": "18",
+         "news_type": "World"
+       },
+       {
+         "id": "19",
+         "news_type": "Technology"
+       },
+       {
+         "id": "20",
+         "news_type": "Business"
+       },
+       {
+         "id": "21",
+         "news_type": "Environment"
+       },
+       {
+         "id": "22",
+         "news_type": "Local"
+       },
+       {
+         "id": "23",
+         "news_type": "Health"
+       },
+       {
+         "id": "24",
+         "news_type": "World"
+       },
+       {
+         "id": "25",
+         "news_type": "Technology"
+       }
+     ]
+   }
+   
