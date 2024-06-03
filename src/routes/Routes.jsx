@@ -9,6 +9,10 @@ import Local from "../pages/Local";
 import Health from "../pages/Health";
 import World from "../pages/World";
 import About from "../pages/About";
+import Login from "../pages/Login";
+import Registration from "../pages/Registration";
+import PrivateRooutes from "./PrivateRooutes";
+import DashboardLayouts from "../layouts/DashboardLayouts";
 
 
   const router = createBrowserRouter([
@@ -49,8 +53,29 @@ import About from "../pages/About";
           path:"about",
           element:<About/>
         },
+        {
+          path:"login",
+          element:<Login/>
+        },
+        {
+          path:"register",
+          element:<Registration/>
+        },
       ]
     },
+    {
+      path:"/dashboard",
+      element:<PrivateRooutes>
+        <DashboardLayouts/>
+      </PrivateRooutes>,
+      errorElement:<ErrorElement/>,
+      children:[
+        {
+          
+        }
+      ]
+
+    }
   ]);
 
 

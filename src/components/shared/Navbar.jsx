@@ -1,7 +1,18 @@
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom"
+import auth from "../../firebase/firebase.config";
 
 
 function Navbar() {
+const [user] = useAuthState(auth);
+const [signOut] = useSignOut(auth);
+
+    const handleSignOut =async () => {
+        const success = await signOut();
+        if (success) {
+          alert('You are sign out');
+        }
+      }
   return (
     <div className="navbar bg-secondary-content rounded-xl sticky z-10">
   <div className="navbar-start">
@@ -49,7 +60,18 @@ function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn bg-secondary-content">Button</a>
+  {
+                user?.email ?
+                <>
+               <Link to="dashboard" className="btn mr-3"> Dashboard</Link>
+               <button className="btn" onClick={handleSignOut}> sign out</button>
+                </>
+                :
+                <>
+                 <Link to={'login'} className="btn mr-3">Login</Link>
+                <Link to={'register'} className="btn">Register</Link>
+                </>
+            }
   </div>
 </div>
   )
