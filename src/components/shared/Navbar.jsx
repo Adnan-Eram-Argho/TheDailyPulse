@@ -63,13 +63,13 @@ const [signOut] = useSignOut(auth);
   {
                 user?.email ?
                 <>
-               <Link to="dashboard" className="btn mr-3"> Dashboard</Link>
-               <button className="btn" onClick={handleSignOut}> sign out</button>
+               <Link to="dashboard" className="btn mr-3 bg-secondary-content"> Dashboard</Link>
+               <button className="btn bg-secondary-content" onClick={handleSignOut}> sign out</button>
                 </>
                 :
                 <>
-                 <Link to={'login'} className="btn mr-3">Login</Link>
-                <Link to={'register'} className="btn">Register</Link>
+                 <Link to={'login'} className="btn mr-3 bg-secondary-content">Login</Link>
+                <Link to={'register'} className="btn bg-secondary-content">Register</Link>
                 </>
             }
   </div>

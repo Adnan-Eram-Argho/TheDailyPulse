@@ -12,7 +12,7 @@ function SingleCardNews({singleNews}) {
       {singleNews?.title}
       
     </h2>
-    <p>{singleNews?.description}</p>
+    <p>{singleNews?.description}</p> 
     <div className="card-actions justify-end">
        
       <div className="badge badge-outline">{singleNews.news_type}</div>

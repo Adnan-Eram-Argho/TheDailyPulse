@@ -13,6 +13,10 @@ import Login from "../pages/Login";
 import Registration from "../pages/Registration";
 import PrivateRooutes from "./PrivateRooutes";
 import DashboardLayouts from "../layouts/DashboardLayouts";
+import MainDashboard from "../components/dashboard/MainDashboard";
+import AllNews from "../components/dashboard/AllNews";
+import AddNews from "../components/dashboard/AddNews";
+import EditNews from "../components/dashboard/EditNews";
 
 
   const router = createBrowserRouter([
@@ -71,8 +75,21 @@ import DashboardLayouts from "../layouts/DashboardLayouts";
       errorElement:<ErrorElement/>,
       children:[
         {
-          
-        }
+          index:true,
+          element:<MainDashboard/>
+        },
+        {
+          path:'all-news',
+          element:<AllNews/>
+        },
+        {
+          path:'add-news',
+          element:<AddNews/>
+        },
+        {
+          path:'edit-news/:id',
+          element:<EditNews/>
+        },
       ]
 
     }

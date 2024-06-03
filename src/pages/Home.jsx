@@ -56,7 +56,7 @@ function Home() {
           to={"technology"}
           className="btn mr-5 bg-secondary-content mt-2 w-96 text-2xl"
         >
-          {" "}
+          
           see more
         </Link>
       </div>
@@ -74,7 +74,7 @@ function Home() {
           to={"business"}
           className="btn mr-5 bg-secondary-content mt-2 w-96 text-2xl"
         >
-          {" "}
+          
           see more
         </Link>
       </div>
