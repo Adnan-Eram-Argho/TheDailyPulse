@@ -5,9 +5,15 @@ import { Link } from "react-router-dom";
 
 
 function SingleDashboardNews({news}) {
+  const token = localStorage.getItem('token')
     async function deleteElement(){
-      
-        const del = await axios.delete(`http://localhost:5000/news_articles/${news?._id}`);
+      let config = {
+        headers: {
+          authorization: `bearer ${token}`,
+        }
+      }
+
+        const del = await axios.delete(`http://localhost:5000/news_articles/${news?._id}`,config);
         console.log(del)
         if(del){
          

@@ -39,7 +39,7 @@ function Home() {
           ?.reverse()
           ?.splice(0, 3)
           ?.map((singleNews) => (
-            <LatestNews key={singleNews?.id} singleNews={singleNews} />
+            <LatestNews key={singleNews?._id} singleNews={singleNews} />
           ))}
       </div>
       {
@@ -48,13 +48,13 @@ function Home() {
       <h1 className="text-center mt-5 text-4xl">Tech News</h1>
       <div className="flex flex-wrap mt-5 mb-5 items-center justify-between">
         {news?.filter(techfilter)?.splice(0, 3)?.map((singleNews) => (
-          <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
+          <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
         ))}
       </div>
       <div className="flex items-center justify-center">
         <Link
           to={"technology"}
-          className="btn mr-5 bg-secondary-content mt-2 w-96 text-2xl"
+          className="btn mr-5 bg-secondary-content mt-2 w-80 text-2xl"
         >
           
           see more
@@ -66,13 +66,13 @@ function Home() {
       <h1 className="text-center mt-5 text-4xl">Business News</h1>
       <div className="flex flex-wrap mt-5 mb-5 items-center justify-between">
         {news?.filter(business)?.splice(0, 3)?.map((singleNews) => (
-          <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
+          <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
         ))}
       </div>
       <div className="flex items-center justify-center">
         <Link
           to={"business"}
-          className="btn mr-5 bg-secondary-content mt-2 w-96 text-2xl"
+          className="btn mr-5 bg-secondary-content mt-2 w-80 text-2xl"
         >
           
           see more
@@ -85,13 +85,13 @@ function Home() {
       <h1 className="text-center mt-5 text-4xl">Environment News</h1>
       <div className="flex flex-wrap mt-5 mb-5 items-center justify-between  ">
         {news?.filter(Environment)?.splice(0, 3)?.map((singleNews) => (
-          <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
+          <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
         ))}
       </div>
       <div className="flex items-center justify-center">
         <Link
           to={"environment"}
-          className="btn mr-5 bg-secondary-content mt-2 w-96 text-2xl mb-5"
+          className="btn mr-5 bg-secondary-content mt-2 w-80 text-2xl mb-5"
         >
           {" "}
           see more

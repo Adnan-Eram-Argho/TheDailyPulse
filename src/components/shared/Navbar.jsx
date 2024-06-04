@@ -24,7 +24,7 @@ const [signOut] = useSignOut(auth);
         <li><Link to={'local'}>Local</Link></li>
         
         <li><Link to={'world'}>World</Link></li>
-
+        <li><Link to={'health'}>Health</Link></li>
         <li>
           <a>others</a>
           <ul className="p-2">
@@ -34,9 +34,11 @@ const [signOut] = useSignOut(auth);
             
           </ul>
         </li>
+        <li><Link to={'about'}>About us</Link></li>
+        <li><Link to={'search'}>Search</Link></li>
       </ul>
     </div>
-    <Link to="/" className="btn btn-ghost text-xl">TheDailyPulse</Link>
+    <Link to="/" className="btn btn-ghost sm:text md:text-xl lg:text-xl">TheDailyPulse</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -57,18 +59,19 @@ const [signOut] = useSignOut(auth);
         
       </li>
       <li><Link to={'about'}>About us</Link></li>
+      <li><Link to={'search'}>Search</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
   {
                 user?.email ?
                 <>
-               <Link to="dashboard" className="btn mr-3 bg-secondary-content"> Dashboard</Link>
+               <Link to="dashboard" className="btn mr-2 bg-secondary-content"> Dashboard</Link>
                <button className="btn bg-secondary-content" onClick={handleSignOut}> sign out</button>
                 </>
                 :
                 <>
-                 <Link to={'login'} className="btn mr-3 bg-secondary-content">Login</Link>
+                 <Link to={'login'} className="btn mr-2 bg-secondary-content">Login</Link>
                 <Link to={'register'} className="btn bg-secondary-content">Register</Link>
                 </>
             }

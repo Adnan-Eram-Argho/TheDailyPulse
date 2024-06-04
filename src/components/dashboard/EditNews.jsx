@@ -33,6 +33,7 @@ function EditNews() {
   }, [id]);
 
   const handleCreateRecipe = async (e) => {
+    const token = localStorage.getItem('token')
     e.preventDefault();
     const form = e.target;
   
@@ -42,8 +43,12 @@ function EditNews() {
     const description = form.description.value;
     const newsData = {  title, image, news_type, description };
     console.log(newsData);
-
-    await axios.patch(`http://localhost:5000/news_articles/${id}`, newsData);
+    let config = {
+      headers: {
+        authorization: `bearer ${token}`,
+      }
+    }
+    await axios.patch(`http://localhost:5000/news_articles/${id}`, newsData,config);
     toast.success('Successfully edited!')
   };
 

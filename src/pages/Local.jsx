@@ -22,7 +22,7 @@ function Local() {
 
     <div className="flex flex-wrap mt-5 mb-5 items-center justify-between">
       {news?.filter(localFilter)?.map((singleNews) => (
-        <SingleCardNews key={singleNews?.id} singleNews={singleNews} />
+        <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
       ))}
     </div>
   </div>

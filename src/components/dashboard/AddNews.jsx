@@ -20,6 +20,7 @@ function AddNews() {
     }, []);
     
     const  handleCreateRecipe=async(e)=>{
+      const token = localStorage.getItem('token')
       e.preventDefault();
       const form =e.target;
       
@@ -29,8 +30,13 @@ function AddNews() {
       const description = form.description.value;
       const newsData = {title,image,news_type,description}
       console.log(newsData)
+      let config = {
+        headers: {
+          authorization: `bearer ${token}`,
+        }
+      }
   
-     const result=  await axios.post("http://localhost:5000/news_articles",newsData).then() 
+     const result=  await axios.post("http://localhost:5000/news_articles",newsData,config).then() 
      console.log(result)
      toast.success('Successfully added!')
     }
@@ -81,7 +87,7 @@ function AddNews() {
       <input
         type="submit"
         
-        value={"Add Product"}
+        value={"Add News"}
         className="w-full py-5 px-7 border btn btn-neutral"
       />
     </div>

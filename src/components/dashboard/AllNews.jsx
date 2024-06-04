@@ -34,7 +34,7 @@ function AllNews() {
       <h1 className="text-3xl my-5 font-bold">All news</h1>
       <div className="flex flex-wrap mt-5 w-11/12 m-auto">
         {newses.map((news) => (
-          <SingleDashboardNews key={news.id} news={news} />
+          <SingleDashboardNews key={news._id} news={news} />
         ))}
       </div>
     </>

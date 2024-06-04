@@ -10,7 +10,7 @@ function Hero() {
     >
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold">TheDailyPulse</h1>
+          <h1 className="text-4xl font-bold">TheDailyPulse</h1>
           <p className="py-6">
             TheDailyPulse delivers up-to-the-minute news and in-depth analysis
             on global and local events. Stay informed with breaking news, expert

@@ -19,6 +19,7 @@ import AddNews from "../components/dashboard/AddNews";
 import EditNews from "../components/dashboard/EditNews";
 import Profile from "../components/dashboard/Profile";
 import EditProfile from "../components/dashboard/EditProfile";
+import Search from "../pages/Search";
 
 
   const router = createBrowserRouter([
@@ -66,6 +67,10 @@ import EditProfile from "../components/dashboard/EditProfile";
         {
           path:"register",
           element:<Registration/>
+        },
+        {
+          path:"search",
+          element:<Search/>
         },
       ]
     },

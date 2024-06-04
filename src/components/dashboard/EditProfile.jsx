@@ -21,13 +21,14 @@ function EditProfile() {
         mobileNumber,
         //   email: data?.email,
       };
-  
+      const token = localStorage.getItem('token')
       fetch(
         `http://localhost:5000/user/${data?.email}`,
         {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
+            authorization: `bearer ${token}`
           },
           body: JSON.stringify(userData),
         }
