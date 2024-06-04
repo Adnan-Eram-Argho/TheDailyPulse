@@ -13,13 +13,13 @@ function EditNews() {
   useEffect(() => {
     async function load() {
       try {
-        const newsTypeData = await axios.get("https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_types");
+        const newsTypeData = await axios.get("https://the-daily-pulse-server.vercel.app/news_types");
         console.log(newsTypeData)
         if (newsTypeData?.status === 200) {
           setNewsType(newsTypeData?.data);
         }
 
-        const newsData = await axios.get(`https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_articles/${id}`);
+        const newsData = await axios.get(`https://the-daily-pulse-server.vercel.app/news_articles/${id}`);
         setNewses(newsData?.data);
         console.log(newsData)
       } catch (error) {
@@ -48,7 +48,7 @@ function EditNews() {
         authorization: `bearer ${token}`,
       }
     }
-    await axios.patch(`https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_articles/${id}`, newsData,config);
+    await axios.patch(`https://the-daily-pulse-server.vercel.app/news_articles/${id}`, newsData,config);
     toast.success('Successfully edited!')
   };
 

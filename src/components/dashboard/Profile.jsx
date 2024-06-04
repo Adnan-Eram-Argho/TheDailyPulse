@@ -8,7 +8,7 @@ function Profile() {
   const [userInfo, setUserInfo] = useState();
 
   useEffect(() => {
-    fetch(`https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/user/${user?.email}`)
+    fetch(`https://the-daily-pulse-server.vercel.app/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);

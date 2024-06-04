@@ -38,7 +38,7 @@ function Registration() {
                   email: data?.user?.email,
                   name:name
                 }
-                fetch("https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/user", {
+                fetch("https://the-daily-pulse-server.vercel.app/user", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
