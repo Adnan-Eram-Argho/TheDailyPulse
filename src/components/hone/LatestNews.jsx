@@ -6,7 +6,7 @@ function LatestNews({singleNews}) {
     
   return (
     <>
-    <div className="indicator w-96">
+    <div className="indicator w-80">
   <span className="indicator-item badge badge-secondary">New</span> 
   <div className="card  bg-base-100 shadow-xl h-[500px]">
   <figure><img src={singleNews?.image} alt="Shoes" /></figure>

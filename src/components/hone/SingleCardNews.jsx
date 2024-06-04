@@ -5,7 +5,7 @@ function SingleCardNews({singleNews}) {
   return (
     <>
  
-  <div className="card w-96 bg-base-100 shadow-xl h-[500px] mt-5">
+  <div className="card w-80 bg-base-100 shadow-xl h-[500px] mt-5">
   <figure><img src={singleNews?.image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title"> 

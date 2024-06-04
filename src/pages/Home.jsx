@@ -34,7 +34,7 @@ function Home() {
       <NewsTypes />
 
       <h1 className="text-center mt-5 text-4xl">Latest News</h1>
-      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5">
+      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5 justify-center">
         {news
           ?.reverse()
           ?.splice(0, 3)
@@ -46,7 +46,7 @@ function Home() {
         //tech
       }
       <h1 className="text-center mt-5 text-4xl">Tech News</h1>
-      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5">
+      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5 justify-center">
         {news?.filter(techfilter)?.splice(0, 3)?.map((singleNews) => (
           <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
         ))}
@@ -64,7 +64,7 @@ function Home() {
         //business
       }
       <h1 className="text-center mt-5 text-4xl">Business News</h1>
-      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5">
+      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5 justify-center">
         {news?.filter(business)?.splice(0, 3)?.map((singleNews) => (
           <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
         ))}
@@ -83,7 +83,7 @@ function Home() {
       }
 
       <h1 className="text-center mt-5 text-4xl">Environment News</h1>
-      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5  ">
+      <div className="flex flex-wrap mt-5 mb-5 items-center gap-5 justify-center  ">
         {news?.filter(Environment)?.splice(0, 3)?.map((singleNews) => (
           <SingleCardNews key={singleNews?._id} singleNews={singleNews} />
         ))}
