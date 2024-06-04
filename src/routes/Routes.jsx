@@ -91,7 +91,7 @@ import Search from "../pages/Search";
           <EditProfile />
         ,
            loader: ({ params }) =>
-            fetch(`http://localhost:5000/user/get/${params.id}`),
+            fetch(`https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/user/get/${params.id}`),
         },
         {
           path:'all-news',

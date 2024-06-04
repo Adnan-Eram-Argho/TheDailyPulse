@@ -10,7 +10,7 @@ function AllNews() {
   useEffect(() => {
     async function load() {
       try {
-        const newsData = await axios.get("http://localhost:5000/news_articles");
+        const newsData = await axios.get("https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_articles");
         setNewses(newsData?.data);
         setLoading(false);
       } catch (err) {

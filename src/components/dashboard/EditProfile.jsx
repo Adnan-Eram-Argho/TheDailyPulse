@@ -23,7 +23,7 @@ function EditProfile() {
       };
       const token = localStorage.getItem('token')
       fetch(
-        `http://localhost:5000/user/${data?.email}`,
+        `https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/user/${data?.email}`,
         {
           method: "PATCH",
           headers: {

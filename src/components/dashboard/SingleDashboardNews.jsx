@@ -13,7 +13,7 @@ function SingleDashboardNews({news}) {
         }
       }
 
-        const del = await axios.delete(`http://localhost:5000/news_articles/${news?._id}`,config);
+        const del = await axios.delete(`https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_articles/${news?._id}`,config);
         console.log(del)
         if(del){
          

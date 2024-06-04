@@ -7,7 +7,7 @@ function AddNews() {
     const [newsType, setNewsType] = useState();
     useEffect(() => {
       async function load() {
-        const data =await axios.get("http://localhost:5000/news_types");
+        const data =await axios.get("https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_types");
         
         if (data?.status === 200) {
           setNewsType(data?.data);
@@ -36,7 +36,7 @@ function AddNews() {
         }
       }
   
-     const result=  await axios.post("http://localhost:5000/news_articles",newsData,config).then() 
+     const result=  await axios.post("https://the-daily-pulse-server-git-main-adnan-eram-arghos-projects.vercel.app/news_articles",newsData,config).then() 
      console.log(result)
      toast.success('Successfully added!')
     }
