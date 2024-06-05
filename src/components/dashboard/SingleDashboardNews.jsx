@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 
 import axios from "axios";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 
-function SingleDashboardNews({news}) {
+function SingleDashboardNews({news}) { 
   const token = localStorage.getItem('token')
     async function deleteElement(){
       let config = {
@@ -17,7 +18,7 @@ function SingleDashboardNews({news}) {
         console.log(del)
         if(del){
          
-          window.location.reload();
+          toast.success('Successfully edited!')
   
         }
        }
